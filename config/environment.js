@@ -20,22 +20,29 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
-    // ENV.APP.LOG_RESOLVER = true;
+    ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    // ENV.APP.LOG_TRANSITIONS = true;
+    ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
   }
 
+  ENV['g-map'] = {
+      libraries: ['places', 'geometry'],
+      key: 'AIzaSyDVU7RKg2zIUHoD8pg4L0gHMqdUJpAzhgw',
+      language: 'en',
+      protocol: 'https'
+  };
+
   if (environment === 'test') {
-    // Testem prefers this...
-    ENV.locationType = 'none';
+      // Testem prefers this...
+      ENV.locationType = 'none';
 
-    // keep test console output quieter
-    ENV.APP.LOG_ACTIVE_GENERATION = false;
-    ENV.APP.LOG_VIEW_LOOKUPS = false;
+      // keep test console output quieter
+      ENV.APP.LOG_ACTIVE_GENERATION = false;
+      ENV.APP.LOG_VIEW_LOOKUPS = false;
 
-    ENV.APP.rootElement = '#ember-testing';
+      ENV.APP.rootElement = '#ember-testing';
   }
 
   if (environment === 'production') {
