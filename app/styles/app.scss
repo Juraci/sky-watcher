@@ -1,0 +1,51 @@
+@import "bower_components/bootstrap/scss/bootstrap";
+
+#sidebar-wrapper {
+    z-index: 1;
+    position: absolute;
+    width: 500px;
+    height: 100%;
+    overflow-y: hidden;
+    background: #ededed;
+    opacity: 0.9;
+    overflow: scroll;
+
+    .property {
+        display: flex;
+        cursor: pointer;
+
+        img {
+            width: 40%;
+            height: 60%;
+        }
+
+        .card-block {
+            margin-left: 1px;
+            padding: 0 0 0 0.25rem;
+
+            .address {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+#map-wrapper {
+    width: 100%;
+    position: absolute;
+    padding-left: 490px;
+
+    /* Necessary to display google maps */
+    .g-map-canvas {
+        width: 100%;
+        height: 100vh;
+    }
+
+    #marker-image {
+        display: block;
+        max-width: 350px;
+        max-height: 300px;
+        width: auto;
+        height: auto;
+    }
+}

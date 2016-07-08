@@ -1,9 +1,15 @@
-<h1>Maps experiments</h1>
-{{#g-map lat=-30.054875 lng=-51.222556 zoom=17 as |context|}}
-    {{#g-map-marker context lat=-30.054875 lng=-51.222556 title='Bearch' as |markerContext|}}
-        {{#g-map-infowindow markerContext openOn="mouseover" closeOn="mouseout"}}
-            <h2>Bearch</h2>
-            <p>Cool people working here</p>
-        {{/g-map-infowindow}}
-    {{/g-map-marker}}
-{{/g-map}}
+<div id='sidebar-wrapper'>
+    <div class='property card m-t-0 m-b-0'>
+        <img src='http://news.mynarrabri.com.au/wp-content/uploads/2015/03/stylish-beautiful-houses-on-home-garden-with-beautiful-houses-with-beautiful-gardens-most-beautiful-gardens.jpg'>
+        <p class='address m-b-0 m-l-1'>Some Coll Property Address</p>
+    </div>
+</div>
+<div id='map-wrapper'>
+    {{#g-map markersFitMode='live' as |context|}}
+        {{#g-map-marker context lat=-30.041548 lng=-51.217107 title='Home' as |markerContext|}}
+            {{#g-map-infowindow markerContext openOn="mouseover" closeOn="mouseout"}}
+                <img id='marker-image' src='http://news.mynarrabri.com.au/wp-content/uploads/2015/03/stylish-beautiful-houses-on-home-garden-with-beautiful-houses-with-beautiful-gardens-most-beautiful-gardens.jpg'>
+            {{/g-map-infowindow}}
+        {{/g-map-marker}}
+    {{/g-map}}
+</div>
